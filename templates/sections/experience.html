@@ -1,0 +1,28 @@
+<!-- templates/sections/experience.html -->
+<div>
+    <h2 class="text-3xl font-semibold mb-8">Experience</h2>
+    
+    <div class="space-y-10">
+        {% for job in experience %}
+        <div class="border-l-4 border-blue-600 pl-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                    <h3 class="font-semibold text-xl">{{ job.role }}</h3>
+                    <p class="text-blue-600">{{ job.company }}</p>
+                </div>
+                <p class="text-sm text-gray-500 font-medium">{{ job.period }}</p>
+            </div>
+            
+            <p class="mt-3 text-gray-700">{{ job.description }}</p>
+            
+            {% if job.highlights %}
+            <ul class="mt-4 list-disc list-inside text-gray-600 space-y-1">
+                {% for highlight in job.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

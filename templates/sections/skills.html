@@ -1,0 +1,34 @@
+<!-- templates/sections/skills.html -->
+<div>
+    <h2 class="text-3xl font-semibold mb-6">Skills</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="font-medium mb-3">Technical</h3>
+            <ul class="space-y-1 text-gray-700">
+                {% for skill in skills.technical %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div>
+            <h3 class="font-medium mb-3">AI / ML</h3>
+            <ul class="space-y-1 text-gray-700">
+                {% for skill in skills.ai_ml %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div>
+            <h3 class="font-medium mb-3">Languages</h3>
+            <ul class="space-y-1 text-gray-700">
+                {% for lang in skills.languages %}
+                <li>{{ lang }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
