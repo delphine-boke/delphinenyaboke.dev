@@ -1,33 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delphine nyaboke | Machine Learning &amp; Software Engineer</title>
-    <meta name="description" content="Building responsible, inclusive AI for low-resource contexts">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>delphine nyaboke | Machine Learning &amp; Software Engineer</title>
+        <meta name="description" content="Building responsible, inclusive AI for low-resource contexts">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <script>
+            // Enable dark mode
+            tailwind.config = {
+                darkMode: 'class'
+            };
     
-    <!-- Tailwind CSS via CDN (easy for now) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    </style>
-</head>
-<body class="bg-white text-gray-900">
+            // Dark mode initialization
+            function initializeDarkMode() {
+                if (localStorage.theme === 'dark' || 
+                    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+            initializeDarkMode();
+        </script>
+        
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                /* Better text scaling support */
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        
+            /* Improve heading scaling */
+            h1, h2, h3 {
+                line-height: 1.2;
+            }
+        
+            /* Make sure buttons and interactive elements scale well */
+            button, a {
+                transition: all 0.2s ease;
+            }
+
+            * ============================================
+            BETTER FOCUS VISIBILITY (Accessibility)
+            ============================================ */
+            :focus-visible {
+                outline: 3px solid #3b82f6;           /* Blue ring */
+                outline-offset: 3px;
+                border-radius: 6px;
+            }
+
+            /* Dark mode focus ring */
+            .dark :focus-visible {
+                outline-color: #60a5fa;               /* Lighter blue for dark mode */
+            }
+
+            /* Optional: Soften focus on buttons */
+            button:focus-visible,
+            a:focus-visible {
+                outline-offset: 4px;
+            }
+
+            /* Remove default outline on mouse click (but keep for keyboard) */
+            :focus:not(:focus-visible) {
+                outline: none;
+            }
+        </style>
+    </head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" 
+       class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 
+              bg-blue-600 text-white px-4 py-2 rounded-lg z-50">
+        Skip to main content
+    </a>
 
     <!-- NAV -->
-    <nav class="border-b">
+    <nav class="border-b border-gray-200 dark:border-gray-800">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="font-semibold text-xl">delphine nyaboke</div>
-            <div class="flex gap-6 text-sm">
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#experience" class="hover:text-blue-600">Experience</a>
-                <a href="#projects" class="hover:text-blue-600">Projects</a>
-                <a href="#fellowship" class="hover:text-blue-600">Fellowship</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            
+            <div class="flex items-center gap-6">
+                <!-- Navigation Links -->
+                <div class="flex gap-6 text-sm">
+                    <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                    <a href="#family" class="hover:text-blue-600 dark:hover:text-blue-400">Personal</a>
+                    <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" 
+                        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
+    <main id="main-content">
 
     <!-- HERO -->
     <!-- templates/sections/hero.html -->
@@ -58,7 +135,7 @@
     <h2 class="text-3xl font-semibold mb-6">About Me</h2>
     
     <div class="prose max-w-none text-gray-700 space-y-6">
-        <p>Machine Learning and Software Engineer with 5+ years of experience in designing, developing, and deploying AI/ML solutions, including LLM-based systems for data classification and automation in fintech and government applications.</p>
+        <p>Machine Learning and Software Engineer with 4+ years of experience in designing, developing, and deploying AI/ML solutions, including LLM-based systems for data classification and automation in fintech and government applications.</p>
         
         <p>Skilled in leading AI tool integration for evidence search/retrieval, synthesis workflows, and policy-facing platforms in low-resource African settings, translating business problems into scalable use cases like multilingual conversational AI serving 50M+ users, using Agile and cross-functional collaboration.</p>
         
@@ -70,7 +147,7 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="bg-gray-50 py-16">
+    <section id="experience" class="bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-5xl mx-auto px-6">
             <!-- templates/sections/experience.html -->
 <div>
@@ -189,21 +266,27 @@
     
     <div class="grid md:grid-cols-2 gap-8">
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">Global PIQA (Swahili Component)</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Contributed to the Swahili portion of the Global PIQA benchmark for physical commonsense reasoning in low-resource languages.</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Contributed to the Swahili portion of the Global PIQA benchmark for physical commonsense reasoning in low-resource languages.</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">LLMs</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    LLMs
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Evaluation</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Evaluation
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Multilingual AI</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Multilingual AI
+                </span>
                 
             </div>
             
@@ -211,27 +294,33 @@
             
             <a href="https://arxiv.org/abs/2510.24081" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
         </div>
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">Enhancing Modified VGG16 for Monkeypox Detection</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Improved model for monkeypox detection using modified VGG16 and explored architectures like ConvNext for enhanced accuracy in data processing</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Improved model for monkeypox detection using modified VGG16 and explored architectures like ConvNext for enhanced accuracy in data processing</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Deep Learning</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Deep Learning
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">CNNs</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    CNNs
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Medical Imaging</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Medical Imaging
+                </span>
                 
             </div>
             
@@ -239,27 +328,33 @@
             
             <a href="https://drive.google.com/file/d/18ioVK1PuAFllV2v7fvo0ukvSYY3fSE3R/view?usp=sharing" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
         </div>
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">Forecasting Electoral Violence by Leveraging Conflict Datasets</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Integrated datasets for ML-based forecasting, involving data processing and analysis at election-year-country level.</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Integrated datasets for ML-based forecasting, involving data processing and analysis at election-year-country level.</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Data Analysis</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Data Analysis
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Machine Learning</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Machine Learning
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Forecasting</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Forecasting
+                </span>
                 
             </div>
             
@@ -267,27 +362,33 @@
             
             <a href="https://drive.google.com/file/d/1Ia1q7wlPCSAzB00wjTJVo_ZzqiL2TTeD/view" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
         </div>
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">AI-Powered Question Answering for Low-Resourced Schools</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Developed conversational chatbot using Rasa, OpenAI, and LLMs for educational information management.</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Developed conversational chatbot using Rasa, OpenAI, and LLMs for educational information management.</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Rasa</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Rasa
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">OpenAI</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    OpenAI
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">LLMs</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    LLMs
+                </span>
                 
             </div>
             
@@ -295,29 +396,37 @@
             
             <a href="https://drive.google.com/file/d/1SQoPg2NLBa8mH4Cg5WWsu7tbzavJ284-/view" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
         </div>
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">LLM-Powered Hospital Navigation System</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Collaborated on LLM system to streamline patient appointment booking, focusing on data processing and integration.</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Collaborated on LLM system to streamline patient appointment booking, focusing on data processing and integration.</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">LLMs</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    LLMs
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Chainlit</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Chainlit
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Data Processing</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Data Processing
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Healthcare</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Healthcare
+                </span>
                 
             </div>
             
@@ -325,27 +434,33 @@
             
             <a href="https://drive.google.com/file/d/11GuEpYj6H1Y1fAEmIDjCAxsf5j5rZbym/view" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
         </div>
         
-        <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-200 transition">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-200 dark:hover:border-blue-600 transition">
             <h3 class="font-semibold text-xl">Leveraging LLMs for Low-Resourced Languages</h3>
             
             
             
-            <p class="mt-3 text-gray-700">Built interface for science education in Kinyarwanda using LLMs, supporting information management in low-resource settings.</p>
+            <p class="mt-3 text-gray-700 dark:text-gray-300">Built interface for science education in Kinyarwanda using LLMs, supporting information management in low-resource settings.</p>
             
             
             <div class="mt-4 flex flex-wrap gap-2">
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">LLMs</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    LLMs
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Multilingual AI</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Multilingual AI
+                </span>
                 
-                <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Education</span>
+                <span class="text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full">
+                    Education
+                </span>
                 
             </div>
             
@@ -353,7 +468,7 @@
             
             <a href="https://drive.google.com/file/d/1qq5v1s6Tdv1tXxKCyvjbG6vZviaRscPw/view" 
                target="_blank"
-               class="mt-4 inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium">
+               class="mt-4 inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                 View project →
             </a>
             
@@ -363,60 +478,71 @@
 </div>
     </section>
 
-
     <!-- FAMILY -->
     <section id="family" class="max-w-5xl mx-auto px-6 py-16">
         <!-- templates/sections/family.html -->
 <div>
-    <h2 class="text-3xl font-semibold mb-8">Personal</h2>
-    
-    <p class="text-gray-700 mb-8">A few moments that ground me ...</p>
+    <h2 class="text-3xl font-semibold mb-3">Personal</h2>
+    <p class="text-gray-600 dark:text-gray-400 mb-8">A few moments that ground me ...</p>
     
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         
-        <div class="group">
-            <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-                <img src="static/images/family/family-photo-one.jpg" 
-                     alt="With daughter"
-                     class="w-full h-full object-cover transition group-hover:scale-105">
+        <div>
+            <div class="aspect-[2/3] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                <img src="static/images/family/the-kids.jpg" 
+                     alt="With kids"
+                     loading="lazy"
+                     class="w-full h-full object-cover">
             </div>
-            <p class="mt-3 text-sm text-center text-gray-600">With daughter</p>
+            <p class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400">With kids</p>
         </div>
         
-        <div class="group">
-            <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+        <div>
+            <div class="aspect-[2/3] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                <img src="static/images/family/family-photo-one.jpg" 
+                     alt="With daughter and partner"
+                     loading="lazy"
+                     class="w-full h-full object-cover">
+            </div>
+            <p class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400">With daughter and partner</p>
+        </div>
+        
+        <div>
+            <div class="aspect-[2/3] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
                 <img src="static/images/family/karting.jpg" 
                      alt="Partner with kids"
-                     class="w-full h-full object-cover transition group-hover:scale-105">
+                     loading="lazy"
+                     class="w-full h-full object-cover">
             </div>
-            <p class="mt-3 text-sm text-center text-gray-600">Partner with kids</p>
+            <p class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400">Partner with kids</p>
         </div>
         
-        <div class="group">
-            <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+        <div>
+            <div class="aspect-[2/3] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
                 <img src="static/images/family/pigeon.jpg" 
                      alt="Partner"
-                     class="w-full h-full object-cover transition group-hover:scale-105">
+                     loading="lazy"
+                     class="w-full h-full object-cover">
             </div>
-            <p class="mt-3 text-sm text-center text-gray-600">Partner</p>
+            <p class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400">Partner</p>
         </div>
         
-        <div class="group">
-            <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+        <div>
+            <div class="aspect-[2/3] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
                 <img src="static/images/family/me.jpg" 
                      alt="Me"
-                     class="w-full h-full object-cover transition group-hover:scale-105">
+                     loading="lazy"
+                     class="w-full h-full object-cover">
             </div>
-            <p class="mt-3 text-sm text-center text-gray-600">Me</p>
+            <p class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400">Me</p>
         </div>
         
     </div>
 </div>
-
     </section>
 
     <!-- SKILLS + EDUCATION -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
             <!-- templates/sections/skills.html -->
 <div>
@@ -559,9 +685,42 @@
 </div>
     </section>
 
-    <footer class="border-t py-8 text-center text-sm text-gray-500">
+    <footer class="border-t border-gray-200 dark:border-gray-800 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
         © 2026 delphine nyaboke — Built with care for clarity, accessibility, and impact.
     </footer>
 
+    <!-- Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                `;
+            } else {
+                themeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                `;
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+            updateIcon();
+        });
+
+        updateIcon();
+    </script>
+</main>
 </body>
 </html>
