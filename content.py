@@ -11,7 +11,8 @@ SITE = {
     "social": {
         "linkedin": "https://www.linkedin.com/in/delphine-nyaboke/",
         "github": "https://github.com/delphine-boke",
-        "x": "https://x.com/delphinenyabo12",  
+        "x": "https://x.com/delphinenyabo12", 
+        "medium": "https://medium.com/@delphinenyaboke", 
     }
 }
 
@@ -122,9 +123,9 @@ family = {
     "description": "A few moments that ground me ...",
     "photos": [
         {"file": "static/images/family/family-photo-one.jpg", "caption": "With daughter"},
-        {"file": "static/images/family/family-photo-two.jpg", "caption": "With son"},
+        {"file": "static/images/family/karting.jpg", "caption": "Partner with kids"},
         {"file": "static/images/family/pigeon.jpg", "caption": "Partner"},
-        {"file": "static/images/family/siblings.jpg", "caption": "Brother and Sister"},
+        {"file": "static/images/family/me.jpg", "caption": "Me"},
     ]
 }
 
@@ -133,7 +134,7 @@ family = {
 # =====================
 skills = {
     "technical": ["Python", "C/C++", "Java", "PyTorch", "LangChain / LangGraph", "Django", "Flask", "Docker", "Git"],
-    "ai_ml": ["Deep Learning", "Machine Learning", "Artificial Intelligence", "RAG Systems", "LLM Evaluation", "Multilingual AI", "Responsible AI", "XAI"],
+    "ai_ml": ["Deep Learning", "Machine Learning", "Artificial Intelligence", "RAG Systems", "LLM Evaluation", "Multilingual AI", "Responsible AI", "Explainable AI"],
     "languages": ["Swahili (Native)", "English (Fluent)", "Mandarin(Basic)", "French(Basic)", "Abagusii (Native)", "Agikuyu(Basic)"]
 }
 
@@ -143,13 +144,15 @@ skills = {
 education = [
     {
         "degree": "MSc Engineering Artificial Intelligence",
-        "institution": "Carnegie Mellon University(CMU)",
-        "year": "2025"
+        "institution": "Carnegie Mellon University Africa",
+        "year": "2025",
+        "link": "https://www.cmu.edu/"
     },
     {
         "degree": "BSc Electrical and Electronic Engineering",
         "institution": "Jomo Kenyatta University of Agriculture and Technology (JKUAT)",
-        "year": "2020"
+        "year": "2020",
+        "link": "https://www.jkuat.ac.ke/"
     }
 ]
 

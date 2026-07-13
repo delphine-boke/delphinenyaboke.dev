@@ -6,7 +6,17 @@
         {% for edu in education %}
         <div>
             <h3 class="font-semibold">{{ edu.degree }}</h3>
-            <p class="text-blue-600">{{ edu.institution }}</p>
+            
+            {% if edu.link %}
+                <a href="{{ edu.link }}" 
+                   target="_blank" 
+                   class="text-blue-600 hover:underline">
+                    {{ edu.institution }}
+                </a>
+            {% else %}
+                <p class="text-blue-600">{{ edu.institution }}</p>
+            {% endif %}
+            
             <p class="text-sm text-gray-500">{{ edu.year }}</p>
         </div>
         {% endfor %}
