@@ -43,6 +43,31 @@
             button, a {
                 transition: all 0.2s ease;
             }
+
+            * ============================================
+            BETTER FOCUS VISIBILITY (Accessibility)
+            ============================================ */
+            :focus-visible {
+                outline: 3px solid #3b82f6;           /* Blue ring */
+                outline-offset: 3px;
+                border-radius: 6px;
+            }
+
+            /* Dark mode focus ring */
+            .dark :focus-visible {
+                outline-color: #60a5fa;               /* Lighter blue for dark mode */
+            }
+
+            /* Optional: Soften focus on buttons */
+            button:focus-visible,
+            a:focus-visible {
+                outline-offset: 4px;
+            }
+
+            /* Remove default outline on mouse click (but keep for keyboard) */
+            :focus:not(:focus-visible) {
+                outline: none;
+            }
         </style>
     </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
