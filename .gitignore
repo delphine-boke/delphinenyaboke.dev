@@ -5,3 +5,5 @@ add-later.txt
 stuff.txt
 
 __pycache__/
+.DS_Store
+
