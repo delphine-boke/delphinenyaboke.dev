@@ -38,13 +38,13 @@ The architecture is intentionally simple and developer-friendly so I can maintai
 ## Project Structure
 delphinenyaboke.dev/
 
-├── build.py                 # Python build script
+├── build.py                 # python build script
 
-├── content.py               # All site content (experience, projects, etc.)
+├── content.py               # all site content (experience, projects, etc.)
 
-├── templates/               # Jinja2 HTML templates
+├── templates/               # jinja2 HTML templates
 
-├── static/                  # Images, CSS, and assets
+├── static/                  # images, css, and assets
 
 └── README.md
 
@@ -59,7 +59,7 @@ delphinenyaboke.dev/
 git clone https://github.com/delphine-boke/delphinenyaboke.dev.git
 cd delphinenyaboke.dev
 
-# Install dependencies (if any)
+# install dependencies
 pip install -r requirements.txt
 
 # build the site
