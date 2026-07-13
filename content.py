@@ -111,6 +111,20 @@ projects = [
         "description": "Developed conversational chatbot using Rasa, OpenAI, and LLMs for educational information management.",
         "tech": ["Rasa", "OpenAI", "LLMs"],
         "link": "https://drive.google.com/file/d/1SQoPg2NLBa8mH4Cg5WWsu7tbzavJ284-/view"
+    },
+    
+    {
+        "title": "LLM-Powered Hospital Navigation System",
+        "description": "Collaborated on LLM system to streamline patient appointment booking, focusing on data processing and integration.",
+        "tech": ["LLMs", "Chainlit", "Data Processing", "Healthcare"],
+        "link": "https://drive.google.com/file/d/11GuEpYj6H1Y1fAEmIDjCAxsf5j5rZbym/view"
+    },
+    
+    {
+        "title": "Leveraging LLMs for Low-Resourced Languages",
+        "description": "Built interface for science education in Kinyarwanda using LLMs, supporting information management in low-resource settings.",
+        "tech": ["LLMs", "Multilingual AI", "Education"],
+        "link": "https://drive.google.com/file/d/1qq5v1s6Tdv1tXxKCyvjbG6vZviaRscPw/view"
     }
     
 ]
