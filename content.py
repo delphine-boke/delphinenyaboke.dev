@@ -136,7 +136,8 @@ family = {
     "title": "Personal",
     "description": "A few moments that ground me ...",
     "photos": [
-        {"file": "static/images/family/family-photo-one.jpg", "caption": "With daughter"},
+        {"file": "static/images/family/the-kids.jpg", "caption": "With kids"},
+        {"file": "static/images/family/family-photo-one.jpg", "caption": "With daughter and partner"},
         {"file": "static/images/family/karting.jpg", "caption": "Partner with kids"},
         {"file": "static/images/family/pigeon.jpg", "caption": "Partner"},
         {"file": "static/images/family/me.jpg", "caption": "Me"},
