@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.name }} | {{ site.tagline }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ site.name }} | {{ site.tagline }}</title>
+        <meta name="description" content="{{ site.description }}">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <script>
+            // Enable dark mode
+            tailwind.config = {
+                darkMode: 'class'
+            };
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        // Tailwind dark mode configuration
-        function initializeDarkMode() {
-            if (localStorage.theme === 'dark' || 
-                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
+            // Dark mode initialization
+            function initializeDarkMode() {
+                if (localStorage.theme === 'dark' || 
+                    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
             }
-        }
-        initializeDarkMode();
-    </script>
-    
-    <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    </style>
-</head>
+            initializeDarkMode();
+        </script>
+        
+        <style>
+            body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        </style>
+    </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
 
     <!-- NAV -->
@@ -46,26 +51,10 @@
                 <button id="theme-toggle" 
                         class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
                     <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <!-- Sun icon (default) -->
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                               d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
                 </button>
-            </div>
-        </div>
-    </nav>
-<body class="bg-white text-gray-900">
-
-    <!-- NAV -->
-    <nav class="border-b">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-semibold text-xl">{{ site.name }}</div>
-            <div class="flex gap-6 text-sm">
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#experience" class="hover:text-blue-600">Experience</a>
-                <a href="#projects" class="hover:text-blue-600">Projects</a>
-                <a href="#fellowship" class="hover:text-blue-600">Fellowship</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
             </div>
         </div>
     </nav>
@@ -79,7 +68,7 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="bg-gray-50 py-16">
+    <section id="experience" class="bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-5xl mx-auto px-6">
             {% include "sections/experience.html" %}
         </div>
@@ -90,14 +79,13 @@
         {% include "sections/projects.html" %}
     </section>
 
-
     <!-- FAMILY -->
     <section id="family" class="max-w-5xl mx-auto px-6 py-16">
         {% include "sections/family.html" %}
     </section>
 
     <!-- SKILLS + EDUCATION -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-gray-50 dark:bg-gray-900 py-16">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
             {% include "sections/skills.html" %}
             {% include "sections/education.html" %}
@@ -109,14 +97,15 @@
         {% include "sections/contact.html" %}
     </section>
 
-    <footer class="border-t py-8 text-center text-sm text-gray-500">
+    <footer class="border-t border-gray-200 dark:border-gray-800 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
         © 2026 {{ site.name }} — Built with care for clarity, accessibility, and impact.
     </footer>
 
+    <!-- Dark Mode Script -->
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
-    
+
         function updateIcon() {
             if (document.documentElement.classList.contains('dark')) {
                 themeIcon.innerHTML = `
@@ -130,7 +119,7 @@
                 `;
             }
         }
-    
+
         themeToggle.addEventListener('click', () => {
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
@@ -141,8 +130,7 @@
             }
             updateIcon();
         });
-    
-        // Set initial icon
+
         updateIcon();
     </script>
 
