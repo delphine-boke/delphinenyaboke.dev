@@ -20,8 +20,8 @@ SITE = {
 # =====================
 about = {
     "title": "About Me",
-    "intro": """I'm a Machine Learning and Software Engineer with experience designing and deploying 
-    AI/ML systems in low-resource African settings. My work focuses on responsible AI, evidence synthesis, 
+    "intro": """I'm a Machine Learning and Software Engineer with experience designing and deploying  AI/ML systems in low-resource African settings. 
+    My work focuses on responsible AI, evidence synthesis, 
     multilingual systems, and human-in-the-loop approaches — particularly in policy, journalism, healthcare, and education.""",
 }
 
@@ -29,19 +29,6 @@ about = {
 # EXPERIENCE 
 # =====================
 experience = [
-    # {
-    #     "role": "Mozilla Embedded Fellow",
-    #     "company": "Baraza Media Lab",
-    #     "period": "June 2026 – Present",
-    #     "location": "Nairobi, Kenya",
-    #     "description": "Leading the co-design and implementation of an AI bias auditing tool for Kenyan and African journalism as part of the Bias Lens project.",
-    #     "highlights": [
-    #         "Co-designing tools and annotation workflows with journalists through hackathons",
-    #         "Building LangGraph + Streamlit prototype for detecting cultural and Western bias in AI-generated stories",
-    #         "Running 100+ journalist pilot targeting >70% actionable accuracy",
-    #         "Preparing open-source release and research outputs for Q4 2026"
-    #     ]
-    # },
     {
         "role": "AI & Machine Learning Specialist",
         "company": "International Centre for Evaluation and Development (ICED)",
@@ -128,35 +115,14 @@ projects = [
 ]
 
 # =====================
-# BIAS LENS FELLOWSHIP (Articles + Media)
-# =====================
-# fellowship = {
-#     "title": "Bias Lens Fellowship",
-#     "intro": "Updates, articles, and learnings from my Mozilla Fellowship work on AI bias auditing for journalism.",
-#     "articles": [
-#         {
-#             "title": "First Journalist Hackathon – Key Learnings",
-#             "date": "July 2026",
-#             "summary": "Co-designed annotation guidelines with Kenyan journalists...",
-#             "has_photo": True,
-#             "photo": "static/images/fellowship/hackathon1.jpg",   # placeholder
-#             "has_video": False,
-#             "video_embed": None,   # or YouTube/Vimeo embed code later
-#             "link": "#"
-#         },
-#         # Add more articles here...
-#     ]
-# }
-
-# =====================
 # FAMILY SECTION (3-4 photos)
 # =====================
 family = {
     "title": "Personal",
-    "description": "A few moments that ground me.",
+    "description": "A few moments that ground me ...",
     "photos": [
         {"file": "static/images/family/family-photo-one.jpg", "caption": "With daughter"},
-        {"file": "static/images/family/fmaily-photo-two.jpg", "caption": "With son"},
+        {"file": "static/images/family/family-photo-two.jpg", "caption": "With son"},
         {"file": "static/images/family/pigeon.jpg", "caption": "Partner"},
         {"file": "static/images/family/siblings.jpg", "caption": "Brother and Sister"},
     ]
@@ -166,8 +132,8 @@ family = {
 # SKILLS
 # =====================
 skills = {
-    "technical": ["Python", "PyTorch", "LangChain / LangGraph", "Django", "Flask", "Docker", "Git"],
-    "ai_ml": ["RAG Systems", "LLM Evaluation", "Multilingual AI", "Responsible AI", "XAI"],
+    "technical": ["Python", "C/C++", "Java", "PyTorch", "LangChain / LangGraph", "Django", "Flask", "Docker", "Git"],
+    "ai_ml": ["Deep Learning", "Machine Learning", "Artificial Intelligence", "RAG Systems", "LLM Evaluation", "Multilingual AI", "Responsible AI", "XAI"],
     "languages": ["Swahili (Native)", "English (Fluent)", "Mandarin(Basic)", "French(Basic)", "Abagusii (Native)", "Agikuyu(Basic)"]
 }
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.name }} | {{ site.tagline }}</title>
+    <meta name="description" content="{{ site.description }}">
+    
+    <!-- Tailwind CSS via CDN (easy for now) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- NAV -->
+    <nav class="border-b">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-semibold text-xl">{{ site.name }}</div>
+            <div class="flex gap-6 text-sm">
+                <a href="#about" class="hover:text-blue-600">About</a>
+                <a href="#experience" class="hover:text-blue-600">Experience</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#fellowship" class="hover:text-blue-600">Fellowship</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    {% include "sections/hero.html" %}
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-16">
+        {% include "sections/about.html" %}
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="bg-gray-50 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            {% include "sections/experience.html" %}
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-16">
+        {% include "sections/projects.html" %}
+    </section>
+
+
+    <!-- FAMILY -->
+    <section id="family" class="max-w-5xl mx-auto px-6 py-16">
+        {% include "sections/family.html" %}
+    </section>
+
+    <!-- SKILLS + EDUCATION -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            {% include "sections/skills.html" %}
+            {% include "sections/education.html" %}
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-16">
+        {% include "sections/contact.html" %}
+    </section>
+
+    <footer class="border-t py-8 text-center text-sm text-gray-500">
+        © 2026 {{ site.name }} — Built with care for clarity, accessibility, and impact.
+    </footer>
+
+</body>
+</html>

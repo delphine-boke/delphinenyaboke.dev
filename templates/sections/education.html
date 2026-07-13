@@ -1,0 +1,14 @@
+<!-- templates/sections/education.html -->
+<div>
+    <h2 class="text-3xl font-semibold mb-6">Education</h2>
+    
+    <div class="space-y-8">
+        {% for edu in education %}
+        <div>
+            <h3 class="font-semibold">{{ edu.degree }}</h3>
+            <p class="text-blue-600">{{ edu.institution }}</p>
+            <p class="text-sm text-gray-500">{{ edu.year }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
