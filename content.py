@@ -97,6 +97,25 @@ fellowship = {
     ],
     "announcement_link": "https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2026-mozilla-fellows",
     "profile_link": "https://www.mozillafoundation.org/en/meet-mozilla/expert-hub/delphine-nyaboke/",
+    
+    "media": [
+    {
+        "type": "image",
+        "file": "static/images/fellowship/delphine.png",
+        "caption": "delphine nyaboke - Mozilla Fellow "
+    },
+    {
+        "type": "image",
+        "file": "static/images/fellowship/Mozilla-Fellows-Cover.png",
+        "caption": "2026-2027 Mozilla Fellows"
+    },
+    # Later will  add videos like this:
+    # {
+    #     "type": "youtube",
+    #     "id": "dQw4w9WgXcQ",          # just the YouTube video ID
+    #     "caption": "Hackathon highlight"
+    # },
+],
 }
 
 # =====================
