@@ -82,6 +82,24 @@ experience = [
 ]
 
 # =====================
+# MOZILLA FELLOWSHIP
+# =====================
+fellowship = {
+    "title": "Mozilla Fellow",
+    "subtitle": "2026–2027 Mozilla Fellow (Embedded)",
+    "project": "Bias Lens",
+    "description": """<p>Co-designing and co-creating Bias Lens tool with journalists, content creators and fact checkers through hackathons and community workshops.</p>
+    <p class="mt-3">Piloting the open-source dashboard with over 100 journalists to support ethical, human-centered AI adoption in newsrooms and civic spaces across low-resource contexts.</p>""",
+    "highlights": [
+        "Selected as one of 10 global 2026–2027 Mozilla Fellows building alternatives to extractive tech systems",
+        "Focus on responsible AI tooling that surfaces cultural bias and misinformation in AI-generated African stories",
+        "Community co-design approach via hackathons with journalists, content creators and, fact checkers (in collaboration with <a href='http://barazalab.com/' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-400 hover:underline'>Baraza Media Lab</a> and <a href='https://www.mozillafoundation.org/' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-400 hover:underline'>Mozilla Foundation</a>)",
+    ],
+    "announcement_link": "https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2026-mozilla-fellows",
+    "profile_link": "https://www.mozillafoundation.org/en/meet-mozilla/expert-hub/delphine-nyaboke/",
+}
+
+# =====================
 # PROJECTS
 # =====================
 projects = [

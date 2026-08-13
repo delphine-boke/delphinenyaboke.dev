@@ -1,0 +1,43 @@
+<div>
+    <h2 class="text-3xl font-semibold mb-2">{{ fellowship.title }}</h2>
+    <p class="text-blue-600 dark:text-blue-400 font-medium mb-8">{{ fellowship.subtitle }}</p>
+    
+    <div class="border border-gray-200 dark:border-gray-700 rounded-xl p-8 bg-white dark:bg-gray-900 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-start gap-6">
+            <div class="flex-1">
+                <h3 class="font-semibold text-xl mb-3">{{ fellowship.project }}</h3>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {{ fellowship.description | safe }}
+                </p>
+                
+                {% if fellowship.highlights %}
+                <ul class="mt-5 list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                    {% for item in fellowship.highlights %}
+                    <li>{{ item | safe }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                
+                <div class="mt-6 flex flex-wrap gap-4">
+                    {% if fellowship.announcement_link %}
+                    <a href="{{ fellowship.announcement_link }}" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-5 py-2.5 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition text-sm font-medium">
+                        Official Mozilla announcement →
+                    </a>
+                    {% endif %}
+                    
+                    {% if fellowship.profile_link %}
+                    <a href="{{ fellowship.profile_link }}" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
+                        Mozilla profile →
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
