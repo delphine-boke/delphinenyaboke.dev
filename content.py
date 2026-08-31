@@ -196,7 +196,7 @@ skills = {
 education = [
     {
         "degree": "MSc Engineering Artificial Intelligence",
-        "institution": "Carnegie Mellon University Africa",
+        "institution": "Carnegie Mellon University",
         "year": "2025",
         "link": "https://www.cmu.edu/"
     },
