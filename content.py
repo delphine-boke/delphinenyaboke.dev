@@ -123,6 +123,28 @@ fellowship = {
             "name": "Baraza Media Lab Nairobi - Riverside",
             "date": "August 2026",
             "summary": "First co-design room with journalists, content creators, and fact-checkers.",
+             "photos": [
+                            {
+                                "file": "static/images/fellowship/hubs/Group-Photo-BML-Nairobi.jpg",
+                                "kind": "group",
+                                "caption": "Group Photo Baraza Media Lab Nairobi",
+                            },
+                            {
+                                "file": "static/images/fellowship/hubs/Presentation-BML-Nairobi.jpg",
+                                "kind": "session",
+                                "caption": "Presentation session",
+                            },
+                            {
+                                "file": "static/images/fellowship/hubs/Discussion-BML-Nairobi.jpg",
+                                "kind": "session",
+                                "caption": "Session ongoing",
+                            },
+                            {
+                                "file": "static/images/fellowship/hubs/Ladies-BML-Nairobi.jpg",
+                                "kind": "session",
+                                "caption": "Organisers",
+                            },  
+                        ],
             "videos": [
                 {"id": "j6-HTrKybfI", "kind": "highlight", "caption": "Nairobi highlight"},
                 {"id": "vCaJPism6ss", "kind": "interviews", "caption": "Nairobi interviews"},
@@ -133,6 +155,23 @@ fellowship = {
             "name": "Baraza Media Lab Nakuru",
             "date": "August 2026",
             "summary": "Second session.",
+            "photos": [
+                {
+                    "file": "static/images/fellowship/hubs/Group-Photo-BML-Nakuru.jpg",
+                    "kind": "group",
+                    "caption": "Group Photo Baraza Media Lab Nakuru",
+                },
+                {
+                    "file": "static/images/fellowship/hubs/Discussion-BML-Nakuru.jpg",
+                    "kind": "session",
+                    "caption": "Discussion session",
+                },
+                {
+                    "file": "static/images/fellowship/hubs/Session-Ongoing-BML-Nakuru.jpg",
+                    "kind": "session",
+                    "caption": "Session ongoing",
+                },
+            ],
             "videos": [
                 {"id": "pRB5N7hGAsI", "kind": "highlight", "caption": "Nakuru highlight"},
                 {"id": "TM2WP4Qa1vQ", "kind": "interviews", "caption": "Nakuru interviews"},
@@ -143,6 +182,23 @@ fellowship = {
             "name": "Baraza Media Lab Mombasa",
             "date": "August 2026",
             "summary": "Third session.",
+            "photos": [
+                        {
+                            "file": "static/images/fellowship/hubs/Group-Photo-BML-Mombasa.jpg",
+                            "kind": "group",
+                            "caption": "Group Photo Baraza Media Lab Mombasa",
+                        },
+                        {
+                            "file": "static/images/fellowship/hubs/Presentation-BML-Mombasa.jpg",
+                            "kind": "session",
+                            "caption": "Presentation session",
+                        },
+                        {
+                            "file": "static/images/fellowship/hubs/Session-Ongoing-BML-Mombasa.jpg",
+                            "kind": "session",
+                            "caption": "Session ongoing",
+                        },
+                    ],
             "videos": [
                 {"id": "Lpde_yQCUE0", "kind": "highlight", "aspect": "portrait", "caption": "Mombasa highlight"},
                 {"id": "v9hl6DqqpIc", "kind": "interviews", "caption": "Mombasa interviews"},
@@ -153,6 +209,28 @@ fellowship = {
             "name": "Baraza Media Lab Kisumu",
             "date": "August 2026",
             "summary": "Final Session.",
+            "photos": [
+                {
+                    "file": "static/images/fellowship/hubs/Group-Photo-BML-Kisumu.jpg",
+                    "kind": "group",
+                    "caption": "Group Photo Baraza Media Lab Kisumu",
+                },
+                {
+                    "file": "static/images/fellowship/hubs/Presentation-Ongoing-BML-Kisumu.jpg",
+                    "kind": "session",
+                    "caption": "Presentation session",
+                },
+                {
+                    "file": "static/images/fellowship/hubs/Session-Ongoing-BML-Kisumu.jpg",
+                    "kind": "session",
+                    "caption": "Session ongoing",
+                },
+                {
+                    "file": "static/images/fellowship/hubs/Session-One-BML-Kisumu.jpg",
+                    "kind": "session",
+                    "caption": "Session with attendees",
+                },  
+            ],
             "videos": [
                 {"id": "vXYMsJqvBGM", "kind": "highlight", "caption": "Kisumu highlight"},
                 {"id": "i-Yijb-ZxYE", "kind": "interviews", "aspect": "portrait", "caption": "Kisumu interviews"},

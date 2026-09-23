@@ -102,6 +102,44 @@
                 <p class="text-gray-700 dark:text-gray-300">{{ hub.summary }}</p>
                 {% endif %}
 
+                {% if hub.photos %}
+                <div class="mt-6 space-y-4">
+                    {% for photo in hub.photos %}
+                        {% if photo.kind == "group" %}
+                        <figure>
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                                <img src="{{ photo.file }}"
+                                     alt="{{ photo.caption or hub.name }}"
+                                     loading="lazy"
+                                     class="w-full h-auto object-cover">
+                            </div>
+                            {% if photo.caption %}
+                            <figcaption class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ photo.caption }}</figcaption>
+                            {% endif %}
+                        </figure>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {% for photo in hub.photos %}
+                            {% if photo.kind == "session" %}
+                            <figure>
+                                <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden">
+                                    <img src="{{ photo.file }}"
+                                         alt="{{ photo.caption or hub.name }}"
+                                         loading="lazy"
+                                         class="w-full h-40 object-cover">
+                                </div>
+                                {% if photo.caption %}
+                                <figcaption class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ photo.caption }}</figcaption>
+                                {% endif %}
+                            </figure>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
                 {% if hub.videos %}
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {% for video in hub.videos %}
