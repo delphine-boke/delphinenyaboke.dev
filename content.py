@@ -99,24 +99,62 @@ fellowship = {
     "profile_link": "https://www.mozillafoundation.org/en/meet-mozilla/expert-hub/delphine-nyaboke/",
     
     "media": [
-    {
-        "type": "image",
-        "file": "static/images/fellowship/delphine.png",
-        "caption": "delphine nyaboke - Mozilla Fellow "
+        {
+            "type": "image",
+            "file": "static/images/fellowship/delphine.png",
+            "caption": "delphine nyaboke - Mozilla Fellow",
+        },
+        {
+            "type": "image",
+            "file": "static/images/fellowship/Mozilla-Fellows-Cover.png",
+            "caption": "2026-2027 Mozilla Fellows",
+        },
+    ],
+    "tool": {
+        "name": "Bias Lens",
+        "url": "https://biaslens.org",
+        "eyebrow": "The tool",
+        "blurb": "An open-source dashboard that surfaces cultural bias and misinformation, focusing on the 2027 Kenyan elections as a primary use case. Co-built with journalists, content creators, and fact-checkers.",
+        "cta": "Open biaslens.org",
     },
-    {
-        "type": "image",
-        "file": "static/images/fellowship/Mozilla-Fellows-Cover.png",
-        "caption": "2026-2027 Mozilla Fellows"
-    },
-    # Later will  add videos like this:
-    # {
-    #     "type": "youtube",
-    #     "id": "dQw4w9WgXcQ",          # just the YouTube video ID
-    #     "caption": "Hackathon highlight"
-    # },
-],
+    "hubs": [
+        {
+            "slug": "nairobi-riverside",
+            "name": "Baraza Media Lab Nairobi - Riverside",
+            "date": "August 2026",
+            "summary": "First co-design room with journalists, content creators, and fact-checkers.",
+            "videos": [
+                {"id": "j6-HTrKybfI", "kind": "highlight", "caption": "Nairobi highlight"},
+                {"id": "vCaJPism6ss", "kind": "interview", "caption": "Nairobi interviews"},
+            ],
+        },
+        {
+            "slug": "nakuru",
+            "name": "Baraza Media Lab Nakuru",
+            "date": "August 2026",
+            "summary": "Second session.",
+            "videos": [
+                {"id": "pRB5N7hGAsI", "kind": "highlight", "caption": "Nakuru highlight"},
+                {"id": "TM2WP4Qa1vQ", "kind": "interview", "caption": "Nakuru interviews"},
+            ],
+        },
+        # {
+        #     "slug": "mombasa",
+        #     "name": "Baraza Media Lab Mombasa",
+        #     "date": "August 2026",
+        #     "summary": "Coast hub.",
+        #     "videos": [],
+        # },
+        # {
+        #     "slug": "kisumu",
+        #     "name": "Baraza Media Lab Kisumu",
+        #     "date": "August 2026",
+        #     "summary": "Western Kenya hub.",
+        #     "videos": [],
+        # },
+    ],
 }
+
 
 # =====================
 # PROJECTS
