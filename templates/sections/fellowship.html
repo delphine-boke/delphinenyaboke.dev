@@ -110,7 +110,7 @@
                         <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
                             {% if video.kind == "highlight" %}Highlight{% elif video.kind == "interview" %}Interview{% else %}Video{% endif %}
                         </p>
-                        <div class="relative w-full overflow-hidden rounded-2xl bg-black aspect-video">
+                        <div class="relative w-full overflow-hidden rounded-2xl bg-black {% if video.aspect == 'portrait' %}aspect-[9/16] max-w-[280px]{% else %}aspect-video{% endif %}">
                             <iframe
                                 class="absolute inset-0 h-full w-full"
                                 src="https://www.youtube.com/embed/{{ video.id }}"

@@ -125,7 +125,7 @@ fellowship = {
             "summary": "First co-design room with journalists, content creators, and fact-checkers.",
             "videos": [
                 {"id": "j6-HTrKybfI", "kind": "highlight", "caption": "Nairobi highlight"},
-                {"id": "vCaJPism6ss", "kind": "interview", "caption": "Nairobi interviews"},
+                {"id": "vCaJPism6ss", "kind": "interviews", "caption": "Nairobi interviews"},
             ],
         },
         {
@@ -135,23 +135,29 @@ fellowship = {
             "summary": "Second session.",
             "videos": [
                 {"id": "pRB5N7hGAsI", "kind": "highlight", "caption": "Nakuru highlight"},
-                {"id": "TM2WP4Qa1vQ", "kind": "interview", "caption": "Nakuru interviews"},
+                {"id": "TM2WP4Qa1vQ", "kind": "interviews", "caption": "Nakuru interviews"},
             ],
         },
-        # {
-        #     "slug": "mombasa",
-        #     "name": "Baraza Media Lab Mombasa",
-        #     "date": "August 2026",
-        #     "summary": "Coast hub.",
-        #     "videos": [],
-        # },
-        # {
-        #     "slug": "kisumu",
-        #     "name": "Baraza Media Lab Kisumu",
-        #     "date": "August 2026",
-        #     "summary": "Western Kenya hub.",
-        #     "videos": [],
-        # },
+        {
+            "slug": "mombasa",
+            "name": "Baraza Media Lab Mombasa",
+            "date": "August 2026",
+            "summary": "Third session.",
+            "videos": [
+                {"id": "Lpde_yQCUE0", "kind": "highlight", "aspect": "portrait", "caption": "Mombasa highlight"},
+                {"id": "v9hl6DqqpIc", "kind": "interviews", "caption": "Mombasa interviews"},
+            ],
+        },
+        {
+            "slug": "kisumu",
+            "name": "Baraza Media Lab Kisumu",
+            "date": "August 2026",
+            "summary": "Final Session.",
+            "videos": [
+                {"id": "vXYMsJqvBGM", "kind": "highlight", "caption": "Kisumu highlight"},
+                {"id": "i-Yijb-ZxYE", "kind": "interviews", "aspect": "portrait", "caption": "Kisumu interviews"},
+            ],
+        },
     ],
 }
 
